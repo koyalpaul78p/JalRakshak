@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7BFD3">
+  <meta name="description" content="JalRakshak – learn practical ways to conserve water.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <meta name="description" content="JalRakshak helps everyone learn practical ways to conserve water.">
+  <title>JalRakshak – Every Drop Matters</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="#home" aria-label="JalRakshak Home">
+      <span class="brand-icon">💧</span>
+      <span><strong>JalRakshak</strong><small>Every Drop Matters</small></span>
+    </a>
+    <button id="installBtn" type="button" hidden>Install app</button>
+    <button id="languageBtn" class="language-btn" type="button">हिन्दी</button>
+  </header>
+
+  <main class="main-container">
+    <section id="home" class="page active">
+      <div class="hero">
+        <span class="eyebrow" data-i18n="heroEyebrow">SAVE WATER • SAVE LIFE</span>
+        <h1 data-i18n="heroTitle">Every Drop<br>Matters!</h1>
+        <p data-i18n="heroText">Small steps today, a better tomorrow. Let's protect our planet's most precious resource.</p>
+        <div class="hero-photo"><img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=900&q=85" alt="Clear water flowing in a natural stream"></div><div class="hero-drop" aria-hidden="true">💧</div>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow" data-i18n="overview">YOUR PROGRESS</span><h2 data-i18n="dashboard">Dashboard</h2></div></div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="stat-icon">💧</span><strong id="homeSaved">0 L</strong><small data-i18n="waterSaved">Water saved</small></article>
+        <article class="stat-card"><span class="stat-icon">🌱</span><strong id="homeTips">0</strong><small data-i18n="tipsExplored">Tips explored</small></article>
+        <article class="stat-card"><span class="stat-icon">🏆</span><strong id="homePoints">0</strong><small data-i18n="quizPoints">Quiz points</small></article>
+      </div>
+      <article class="challenge-card">
+        <div class="challenge-icon">🎯</div><div class="challenge-copy"><span class="eyebrow" data-i18n="dailyChallenge">DAILY WATER CHALLENGE</span><h2 data-i18n="challengeTitle">Turn off the tap while brushing</h2><p data-i18n="challengeText">A small habit can prevent unnecessary water waste.</p></div>
+        <button id="challengeBtn" class="button button-light" type="button" data-i18n="completeChallenge">Complete challenge</button>
+        <p id="challengeStatus" class="challenge-status" aria-live="polite"></p>
+      </article>
+      <article class="info-card"><span class="info-icon">🌍</span><div><h2 data-i18n="whyTitle">Why save water?</h2><p data-i18n="whyText">Fresh water is limited and essential for every living being. Saving it today helps protect tomorrow.</p></div></article>
+
+      <section class="visual-section" aria-label="Water conservation photo gallery">
+        <div class="section-heading"><div><span class="eyebrow" data-i18n="photoSectionEyebrow">WATER IN EVERYDAY LIFE</span><h2 data-i18n="photoSectionTitle">Protect Every Drop</h2></div></div>
+        <div class="photo-gallery">
+          <figure><img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=800&q=85" alt="Fresh flowing river water" loading="lazy"><figcaption data-i18n="photoCaption1">Freshwater ecosystems</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1501691223387-dd0500403074?auto=format&fit=crop&w=800&q=85" alt="Rain over a green landscape" loading="lazy"><figcaption data-i18n="photoCaption2">Rainwater collection</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=85" alt="Green plants being cared for" loading="lazy"><figcaption data-i18n="photoCaption3">Water plants wisely</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=85" alt="Cleaning and water-efficient household care" loading="lazy"><figcaption data-i18n="photoCaption4">Smart home habits</figcaption></figure>
+        </div>
+      </section>
+    </section>
+
+    <section id="tips" class="page">
+      <div class="page-heading"><span class="heading-icon">🌿</span><span class="eyebrow" data-i18n="smallChanges">SMALL CHANGES, BIG IMPACT</span><h1 data-i18n="tipsTitle">Save Water Tips</h1><p data-i18n="tipsIntro">Simple everyday actions can make a real difference.</p></div>
+      <p id="tipsProgress" class="fine-print" aria-live="polite"></p><div id="tipsContainer" class="tips-grid"></div>
+    </section>
+
+    <section id="rain" class="page">
+      <div class="page-heading"><span class="heading-icon">🌧️</span><span class="eyebrow" data-i18n="harvestRain">HARVEST THE RAIN</span><h1 data-i18n="rainTitle">Rainwater Harvesting</h1><p data-i18n="rainIntro">Collect rain today and conserve water for tomorrow.</p></div>
+      <article class="rain-hero"><div class="rain-art"><img src="https://images.unsplash.com/photo-1501691223387-dd0500403074?auto=format&fit=crop&w=1000&q=85" alt="Rain falling over a green landscape"><span>RAINWATER HARVESTING</span></div><h2 data-i18n="whatIsRain">What is rainwater harvesting?</h2><p data-i18n="rainDescription">It is the process of collecting and storing rainwater from rooftops or other surfaces for later use.</p></article>
+      <h2 class="section-title" data-i18n="howItWorks">How it works</h2>
+      <div class="rain-steps" id="rainSteps"></div>
+
+      <div class="rain-photo-strip">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=85" alt="Green valley landscape" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=85" alt="Water waves and ocean surface" loading="lazy">
+      </div>
+      <article class="notice-card"><strong>⚠️ <span data-i18n="safetyNote">Safety note</span></strong><p data-i18n="rainSafety">Stored rainwater is not automatically safe to drink. Drinking water must be properly treated and tested. Use untreated collected water for suitable non-drinking purposes.</p></article>
+    </section>
+
+    <section id="calculator" class="page">
+      <div class="page-heading"><span class="heading-icon">📊</span><span class="eyebrow" data-i18n="knowUsage">KNOW YOUR USAGE</span><h1 data-i18n="calculatorTitle">Water Calculator</h1><p data-i18n="calculatorIntro">Estimate your household's daily water use.</p></div>
+      <article class="calculator-card">
+        <label for="people" data-i18n="peopleLabel">Number of people</label>
+        <input id="people" type="number" min="1" max="100" step="1" inputmode="numeric" placeholder="e.g. 4">
+        <label for="usage" data-i18n="usageLabel">Daily usage per person (litres)</label>
+        <input id="usage" type="number" min="1" max="10000" step="1" inputmode="decimal" placeholder="e.g. 135">
+        <button id="calculateBtn" class="button button-primary" type="button" data-i18n="calculate">Calculate usage</button>
+        <div id="calculatorResult" class="result-box" aria-live="polite"><span>💧</span><p data-i18n="resultHint">Your daily household estimate will appear here.</p></div>
+        <p class="fine-print" data-i18n="calculatorNote">This is an estimate based on the values you enter, not a measured bill.</p>
+      </article>
+    </section>
+
+    <section id="quiz" class="page">
+      <div class="page-heading"><span class="heading-icon">🧠</span><span class="eyebrow" data-i18n="learnAndPlay">LEARN AND PLAY</span><h1 data-i18n="quizTitle">Water Awareness Quiz</h1><p data-i18n="quizIntro">Answer questions, learn facts and earn points.</p></div>
+      <article class="quiz-card">
+        <div class="quiz-top"><span id="questionCount">Question 1</span><span id="quizScore">Score: 0</span></div>
+        <div class="progress-track"><div id="quizProgress" class="progress-fill"></div></div>
+        <h2 id="questionText">Loading question…</h2>
+        <div id="optionsContainer" class="options-list"></div>
+        <p id="answerFeedback" class="feedback" aria-live="polite"></p>
+        <button id="nextQuestionBtn" class="button button-primary" type="button" disabled data-i18n="nextQuestion">Next question →</button>
+        <button id="restartQuizBtn" class="text-button hidden" type="button" data-i18n="restartQuiz">Start a new round</button>
+      </article>
+    </section>
+
+    <section id="impact" class="page">
+      <div class="page-heading"><span class="heading-icon">🌍</span><span class="eyebrow" data-i18n="everyDropCounts">EVERY DROP COUNTS</span><h1 data-i18n="impactTitle">My Impact</h1><p data-i18n="impactIntro">Your actions add up to a better future.</p></div>
+      <div class="impact-list">
+        <article class="impact-row"><span>💧</span><div><strong id="impactSaved">0 L</strong><small data-i18n="totalWaterSaved">Total water saved</small></div></article>
+        <article class="impact-row"><span>🏅</span><div><strong id="impactChallenges">0</strong><small data-i18n="challengesCompleted">Challenges completed</small></div></article>
+        <article class="impact-row"><span>⭐</span><div><strong id="impactPoints">0</strong><small data-i18n="totalQuizPoints">Total quiz points</small></div></article>
+        <article class="impact-row"><span>🌱</span><div><strong id="impactTips">0</strong><small data-i18n="tipsRead">Tips explored</small></div></article>
+      </div>
+      <article class="info-card"><span class="info-icon">💚</span><div><h2 data-i18n="keepGoing">Keep going!</h2><p data-i18n="keepGoingText">Consistent small actions are more powerful than one big action.</p></div></article>
+      <button id="resetProgressBtn" class="button button-outline reset-button" type="button" data-i18n="resetProgress">Reset progress</button>
+      <p class="fine-print" data-i18n="resetNote">Resetting will clear saved progress on this device.</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <button class="nav-item active" data-page="home" type="button"><span>🏠</span><small data-i18n="navHome">Home</small></button>
+    <button class="nav-item" data-page="tips" type="button"><span>🌿</span><small data-i18n="navTips">Tips</small></button>
+    <button class="nav-item" data-page="rain" type="button"><span>🌧️</span><small data-i18n="navRain">Rain</small></button>
+    <button class="nav-item" data-page="calculator" type="button"><span>🧮</span><small data-i18n="navCalculator">Calc</small></button>
+    <button class="nav-item" data-page="quiz" type="button"><span>🧠</span><small data-i18n="navQuiz">Quiz</small></button>
+    <button class="nav-item" data-page="impact" type="button"><span>🌍</span><small data-i18n="navImpact">Impact</small></button>
+  </nav>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

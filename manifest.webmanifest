@@ -1,0 +1,19 @@
+{
+  "name": "JalRakshak – Every Drop Matters",
+  "short_name": "JalRakshak",
+  "description": "A water conservation awareness and learning app.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFF5F8",
+  "theme_color": "#F7BFD3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
