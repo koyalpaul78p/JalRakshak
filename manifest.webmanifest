@@ -1,7 +1,7 @@
 {
   "name": "JalRakshak – Every Drop Matters",
   "short_name": "JalRakshak",
-  "description": "A water conservation awareness and learning app.",
+  "description": "JalRakshak is a water conservation awareness and learning app that teaches people how to save water through tips, rainwater harvesting, quizzes and practical activities.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
